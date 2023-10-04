@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grocery1
+spec:
+  selector:
+    app: grocery1
+  ports:
+    - protocol: TCP
+      port: 4200
+      targetPort: 8000
+  type: LoadBalancer
